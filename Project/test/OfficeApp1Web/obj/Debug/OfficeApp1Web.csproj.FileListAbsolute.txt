@@ -1,0 +1,6 @@
+D:\VisualStudio\test\OfficeApp1Web\bin\OfficeApp1Web.dll.config
+D:\VisualStudio\test\OfficeApp1Web\bin\OfficeApp1Web.dll
+D:\VisualStudio\test\OfficeApp1Web\bin\OfficeApp1Web.pdb
+D:\VisualStudio\test\OfficeApp1Web\obj\Debug\OfficeApp1Web.csprojResolveAssemblyReference.cache
+D:\VisualStudio\test\OfficeApp1Web\obj\Debug\OfficeApp1Web.dll
+D:\VisualStudio\test\OfficeApp1Web\obj\Debug\OfficeApp1Web.pdb

@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\OfficeApp1Manifest.xml
+D:\VisualStudio\test\OfficeApp1\bin\Debug\OfficeApp1.debugapp

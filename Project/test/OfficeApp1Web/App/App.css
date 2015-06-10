@@ -1,0 +1,59 @@
+﻿/* 일반 응용 프로그램 스타일*/
+
+#content-main {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 50px; /* #content-footer의 높이와 동일한 값 */
+    overflow: auto; /* 주 콘텐츠 섹션 내에서 스크롤 막대를 사용하도록 설정*/
+}
+
+#content-footer {
+    background-color: #cecece;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* 고정 바닥글 높이 */
+    overflow: hidden; /* 바닥글에 대해 스크롤 막대를 사용하지 않도록 설정 */
+}
+
+.padding {
+    padding: 15px;
+}
+
+#notification-message {
+    background-color: #818285;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    min-height: 80px;
+    right: 0;
+    z-index: 100;
+    bottom: 0;
+    display: none; /* 호출될 때까지 숨김 */
+}
+
+#notification-message-header {
+    font-size: medium;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#notification-message-body {
+    color: #fff;
+}
+
+#notification-message-close {
+    background-image: url("../Images/Close.png");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}

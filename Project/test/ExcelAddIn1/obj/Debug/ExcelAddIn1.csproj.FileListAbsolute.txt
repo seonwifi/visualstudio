@@ -1,0 +1,10 @@
+D:\VisualStudio\test\ExcelAddIn1\bin\Debug\ExcelAddIn1.dll
+D:\VisualStudio\test\ExcelAddIn1\bin\Debug\ExcelAddIn1.pdb
+D:\VisualStudio\test\ExcelAddIn1\bin\Debug\ExcelAddIn1.dll.manifest
+D:\VisualStudio\test\ExcelAddIn1\bin\Debug\ExcelAddIn1.vsto
+D:\VisualStudio\test\ExcelAddIn1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\VisualStudio\test\ExcelAddIn1\obj\Debug\ExcelAddIn1.csprojResolveAssemblyReference.cache
+D:\VisualStudio\test\ExcelAddIn1\obj\Debug\ExcelAddIn1.Properties.Resources.resources
+D:\VisualStudio\test\ExcelAddIn1\obj\Debug\ExcelAddIn1.csproj.GenerateResource.Cache
+D:\VisualStudio\test\ExcelAddIn1\obj\Debug\ExcelAddIn1.dll
+D:\VisualStudio\test\ExcelAddIn1\obj\Debug\ExcelAddIn1.pdb

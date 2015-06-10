@@ -1,0 +1,1 @@
+D:\VisualStudio\test\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
