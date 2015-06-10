@@ -157,6 +157,7 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="ExcelExport\CsClass.cs" />
     <Compile Include="ExcelExport\ExcelToCsv_Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
