@@ -72,15 +72,7 @@ namespace ExcelAddIn2.ExcelExport
         Virtual,
         Interface,
     }
-
-    public class CsFunctionContent
-    {
-        List<string> m_ContentLineList = new List<string>();
-        public void Add(string contentLine)
-        {
-            m_ContentLineList.Add(contentLine);
-        }
-    }
+ 
 
     public class CsFunction
     {
@@ -89,7 +81,7 @@ namespace ExcelAddIn2.ExcelExport
         public string m_ReturnType;
         public string m_Name;
         List<CsFunctionParam> m_ParamList = new List<CsFunctionParam>();
-        public CsFunctionContent m_content;
+        public CsFunctionContents m_content;
         public void AddParam(CsFunctionParam param)
         {
             m_ParamList.Add(param);
@@ -100,7 +92,7 @@ namespace ExcelAddIn2.ExcelExport
     {
        public string ClassName;
        List<CsVariable> m_varList = new List<CsVariable>();
-       List<CsFunction> m_varList = new List<CsFunction>();
+       List<CsFunction> m_FunctionList = new List<CsFunction>();
 
        public void AddVar(CsVariable var)
        {
