@@ -158,6 +158,8 @@
   -->
   <ItemGroup>
     <Compile Include="ExcelExport\CsClass.cs" />
+    <Compile Include="ExcelExport\CSEnumConvert.cs" />
+    <Compile Include="ExcelExport\CsFunction.cs" />
     <Compile Include="ExcelExport\CsFunctionContents.cs" />
     <Compile Include="ExcelExport\ExcelToCsv_Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

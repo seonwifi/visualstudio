@@ -9,6 +9,7 @@ using System.Xml.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
+using ExcelAddIn2.ExcelExport;
 
 namespace ExcelAddIn2
 {
@@ -40,6 +41,17 @@ namespace ExcelAddIn2
             //excelSheet
             try
             {
+                CsClass cc = new CsClass(PublicType.PublicType_public, "myclass", "");
+
+                cc.AddVar(new CsVariable(PublicType.PublicType_public, "int", "m_intvalue", "0"));
+
+                string str = cc.MakeString();
+
+
+                System.IO.TextWriter l_TextWriter = new System.IO.StreamWriter(@"g:/newclass.cs", false, Encoding.UTF8);
+                l_TextWriter.Write(str);
+                l_TextWriter.Close();
+
                 if (Globals.ThisAddIn.Application.ActiveWorkbook == null)
                 {
                     return;
@@ -56,6 +68,9 @@ namespace ExcelAddIn2
                 int endColumn = excelSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell).Column;
                 int endRow = excelSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell).Row;
                 ExcelToCsv_Converter.ConvertCsvAndSave(excelSheet, 1, 1, endColumn, endRow, filePath);
+
+
+
 
                //System.Windows.Forms.MessageBox.Show(excelSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell).Row.ToString());
                // System.Windows.Forms.MessageBox.Show(excelSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell).Column.ToString());
