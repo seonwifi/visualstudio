@@ -32,10 +32,11 @@ namespace ExcelAddIn2.ExcelExport
             m_Value = v_Value;
         }
 
-        public string MakeString()
+        public string MakeString(int depth)
         {
+             
             string varString = "";
-            string PublicTypString = CSEnumConvert.EnumToString<PublicType>(m_PublicType); 
+            string PublicTypString = CsClass.DepthToString(depth) + CSEnumConvert.EnumToString<PublicType>(m_PublicType); 
             varString = PublicTypString;
             varString += " " + m_Type;
             varString += " " + m_Name;
@@ -93,8 +94,12 @@ namespace ExcelAddIn2.ExcelExport
             
            m_varList.Add(var);
        }
+       public void AddFunction(CsFunction var)
+       {
 
-       public string DepthToString(int depth)
+           m_FunctionList.Add(var);
+       }
+       static public string DepthToString(int depth)
        {
            string varString = "";
            for (int i = 0; i < depth; ++i)
@@ -122,13 +127,13 @@ namespace ExcelAddIn2.ExcelExport
            for (int i = 0; i < m_varList.Count; ++i)
            {
               varString += "\r\n";
-              varString += DepthToString(StringDepth + 1) + m_varList[i].MakeString(); 
+              varString +=  m_varList[i].MakeString(StringDepth + 1); 
            }
 
            for (int i = 0; i < m_FunctionList.Count; ++i)
            {
                varString += "\r\n";
-               varString += DepthToString(StringDepth + 1) + m_FunctionList[i].MakeString();
+               varString +=  m_FunctionList[i].MakeString(StringDepth+1);
            }
 
            varString += "\r\n}";

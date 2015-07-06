@@ -19,3 +19,4 @@ D:\VisualStudioSpace\Project\test\ExcelAddIn2\obj\Debug\ExcelAddIn2.Ribbon1.reso
 D:\VisualStudioSpace\Project\test\ExcelAddIn2\obj\Debug\ExcelAddIn2.csproj.GenerateResource.Cache
 D:\VisualStudioSpace\Project\test\ExcelAddIn2\obj\Debug\ExcelAddIn2.dll
 D:\VisualStudioSpace\Project\test\ExcelAddIn2\obj\Debug\ExcelAddIn2.pdb
+D:\VisualStudioSpace\Project\test\ExcelAddIn2\obj\Debug\ExcelAddIn2.csprojResolveAssemblyReference.cache

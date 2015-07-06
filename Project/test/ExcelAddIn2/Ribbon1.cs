@@ -41,16 +41,25 @@ namespace ExcelAddIn2
             //excelSheet
             try
             {
-                CsClass cc = new CsClass(PublicType.PublicType_public, "myclass", "");
+                {
 
-                cc.AddVar(new CsVariable(PublicType.PublicType_public, "int", "m_intvalue", "0"));
+                    CsClass cc = new CsClass(PublicType.PublicType_public, "IData", "");
 
-                string str = cc.MakeString();
+                    //cc.AddVar(new CsVariable(PublicType.PublicType_public, "int", "m_intvalue", "0"));
+                    //cc.AddVar(new CsVariable(PublicType.PublicType_public, "float", "m_floatvalue", "0.0f"));
+
+                    CsFunction cf = new CsFunction(PublicType.PublicType_public, CsFunctionOverrideType.FunctionOverrideType_abstract, "ParseCSV", null);
+
+                    CsFunctionParam cfp = new CsFunctionParam("string", "[]strDatas");
+                    cf.AddParam(cfp); 
+                    cc.AddFunction(cf);
+                    string str = cc.MakeString();
+                    System.IO.TextWriter l_TextWriter = new System.IO.StreamWriter(@"g:/newclass.cs", false, Encoding.UTF8);
+                    l_TextWriter.Write(str);
+                    l_TextWriter.Close();
+                }
 
 
-                System.IO.TextWriter l_TextWriter = new System.IO.StreamWriter(@"g:/newclass.cs", false, Encoding.UTF8);
-                l_TextWriter.Write(str);
-                l_TextWriter.Close();
 
                 if (Globals.ThisAddIn.Application.ActiveWorkbook == null)
                 {

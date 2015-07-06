@@ -23,7 +23,7 @@ namespace ExcelAddIn2
             public static string StartTable = "<table>";
             public static string NoExport = "x";
             public static string NewLineConvert = "<br>";// \n or \r\n
-            public static string TabConvert = "<tab>";// \t
+           // public static string TabConvert = "<tab>";// \t
             public static string CommaConvert = "<comma>";// ,
             public static string QuotationMarksConvert = "<qm>";// '
             public static string DoubleQuotationMarksConvert = "<dqm>";// "
@@ -38,7 +38,7 @@ namespace ExcelAddIn2
         {
             int startCommandColumn      = -1;
             bool usingNewLineConvert    = true;
-            bool usingTabConvert        = true;
+           // bool usingTabConvert        = true;
             bool usingCommaConvert      = true;
             bool usingQuotationMarksConvert = true;
             bool usingDoubleQuotationMarksConvert = true;
@@ -78,7 +78,10 @@ namespace ExcelAddIn2
 
                     if (cellValue == null || cellValue.Value == null)
                     {
-                        csvStringBuild.Append(cert);
+                        if (i != endColumn)
+                        {
+                            csvStringBuild.Append(cert);
+                        } 
                         continue;
                     }
                     else
@@ -89,10 +92,10 @@ namespace ExcelAddIn2
                            csvCell =  csvCell.Replace("\n", CommandCsv.NewLineConvert);
                            csvCell =  csvCell.Replace("\r\n", CommandCsv.NewLineConvert);
                         }
-                        if (usingTabConvert)
-                        {
-                            csvCell = csvCell.Replace("\t", CommandCsv.TabConvert); 
-                        }
+                        //if (usingTabConvert)
+                        //{
+                        //    csvCell = csvCell.Replace("\t", CommandCsv.TabConvert); 
+                        //}
                         if (usingCommaConvert)
                         {
                             csvCell = csvCell.Replace(",", CommandCsv.CommaConvert); 
@@ -109,10 +112,17 @@ namespace ExcelAddIn2
                         }
 
                         csvStringBuild.Append(csvCell);
-                        csvStringBuild.Append(cert);
+                        if (i != endColumn)
+                        {
+                             csvStringBuild.Append(cert);
+                        }
+                       
                     }
                 }
-                csvStringBuild.Append(nextLine); 
+                if (j != endRow)
+                {
+                    csvStringBuild.Append(nextLine); 
+                } 
             }
             return csvStringBuild.ToString();
         }

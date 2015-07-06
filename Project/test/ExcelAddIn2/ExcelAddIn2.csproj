@@ -161,6 +161,12 @@
     <Compile Include="ExcelExport\CSEnumConvert.cs" />
     <Compile Include="ExcelExport\CsFunction.cs" />
     <Compile Include="ExcelExport\CsFunctionContents.cs" />
+    <Compile Include="ExcelExport\CsvParser\CSVBinaryWriter.cs" />
+    <Compile Include="ExcelExport\CsvParser\CSVBinaryReader.cs" />
+    <Compile Include="ExcelExport\CsvParser\CsvStream.cs" />
+    <Compile Include="ExcelExport\DataSample\DataTableMgr.cs" />
+    <Compile Include="ExcelExport\CsvParser\ITableStream.cs" />
+    <Compile Include="ExcelExport\DataSample\TableSample.cs" />
     <Compile Include="ExcelExport\ExcelToCsv_Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
